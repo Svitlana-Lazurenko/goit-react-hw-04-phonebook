@@ -21,8 +21,6 @@ export const Text = styled.span`
 
 export const Button = styled.button`
 
-// --green: rgb(53, 202, 8);
-
   position: relative;
   overflow: hidden;
   transition: all 0.3s;
@@ -58,12 +56,13 @@ export const Button = styled.button`
 
   :before {
     content: '';
+
     position: absolute;
     left: -4em;
+    top: 0;
+
     width: 4em;
     height: 100%;
-    top: 0;
-    transition: transform 0.4s ease-in-out;
     background: linear-gradient(
       to right,
       transparent 1%,
@@ -71,6 +70,8 @@ export const Button = styled.button`
       rgba(27, 253, 156, 0.1) 60%,
       transparent 100%
     );
+
+    transition: transform 0.4s ease-in-out;
   }
 
   :hover:before {
